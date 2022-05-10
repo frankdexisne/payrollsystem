@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1569B1C6-F616-4521-9741-27DB64F3F4DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsAppPayroll.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsAppPayroll</RootNamespace>
+    <AssemblyName>WindowsAppPayroll</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WindowsAppPayroll.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WindowsAppPayroll.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attendance.Designer.vb">
+      <DependentUpon>Attendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attends.Designer.vb">
+      <DependentUpon>Attends.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Attends.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cutoff.Designer.vb">
+      <DependentUpon>Cutoff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cutoff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CutoffList.Designer.vb">
+      <DependentUpon>CutoffList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CutoffList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Department.Designer.vb">
+      <DependentUpon>Department.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Department.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogConfirm.Designer.vb">
+      <DependentUpon>DialogConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogConfirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEmployee.Designer.vb">
+      <DependentUpon>DialogEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogError.Designer.vb">
+      <DependentUpon>DialogError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogForms.vb" />
+    <Compile Include="DialogSuccess.Designer.vb">
+      <DependentUpon>DialogSuccess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSuccess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.vb">
+      <DependentUpon>Employee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeList.Designer.vb">
+      <DependentUpon>EmployeeList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView.Designer.vb">
+      <DependentUpon>EmployeeView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\AppliedOvertimes.Designer.vb">
+      <DependentUpon>AppliedOvertimes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\AppliedOvertimes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\EducationalBackground.Designer.vb">
+      <DependentUpon>EducationalBackground.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\EducationalBackground.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\FamilyBackground.Designer.vb">
+      <DependentUpon>FamilyBackground.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\FamilyBackground.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\LeaveApplicationForm.Designer.vb">
+      <DependentUpon>LeaveApplicationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\LeaveApplicationForm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\LeaveApplications.Designer.vb">
+      <DependentUpon>LeaveApplications.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\LeaveApplications.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\LoanApplicationForm.Designer.vb">
+      <DependentUpon>LoanApplicationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\LoanApplicationForm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\LoanApplications.Designer.vb">
+      <DependentUpon>LoanApplications.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\LoanApplications.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\OvertimeForm.Designer.vb">
+      <DependentUpon>OvertimeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\OvertimeForm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\PersonalData.Designer.vb">
+      <DependentUpon>PersonalData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\PersonalData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_usercontrols\TimeSheet.Designer.vb">
+      <DependentUpon>TimeSheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee_usercontrols\TimeSheet.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForApprovalLeaves.Designer.vb">
+      <DependentUpon>ForApprovalLeaves.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForApprovalLeaves.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNavigation.vb" />
+    <Compile Include="FormValidation.vb" />
+    <Compile Include="JobTitle.Designer.vb">
+      <DependentUpon>JobTitle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JobTitle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalVars.vb" />
+    <Compile Include="Holiday.Designer.vb">
+      <DependentUpon>Holiday.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Holiday.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="models\Cutoffs.vb" />
+    <Compile Include="models\Employees.vb" />
+    <Compile Include="models\Families.vb" />
+    <Compile Include="models\Models.vb" />
+    <Compile Include="models\Overtimes.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OvertimeManagement.Designer.vb">
+      <DependentUpon>OvertimeManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OvertimeManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password.Designer.vb">
+      <DependentUpon>Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollWizard.Designer.vb">
+      <DependentUpon>PayrollWizard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollWizard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payroll_wizard\HollidayWithinCutoff.Designer.vb">
+      <DependentUpon>HollidayWithinCutoff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payroll_wizard\HollidayWithinCutoff.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payroll_wizard\LeaveWithinCutoff.Designer.vb">
+      <DependentUpon>LeaveWithinCutoff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payroll_wizard\LeaveWithinCutoff.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="references_usercontrols\Departments.Designer.vb">
+      <DependentUpon>Departments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="references_usercontrols\Departments.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="references_usercontrols\JobTitles.Designer.vb">
+      <DependentUpon>JobTitles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="references_usercontrols\JobTitles.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ResignForm.Designer.vb">
+      <DependentUpon>ResignForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ResignForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resource1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="services\Contributions.vb" />
+    <Compile Include="services\DateAndTime.vb" />
+    <Compile Include="services\DBConnection.vb" />
+    <Compile Include="services\FormRef.vb" />
+    <Compile Include="services\MdiSubForm.vb" />
+    <Compile Include="services\StringConvert.vb" />
+    <Compile Include="services\Validation.vb" />
+    <Compile Include="userControlAddress.Designer.vb">
+      <DependentUpon>userControlAddress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userControlAddress.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\Dashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\Holidays.Designer.vb">
+      <DependentUpon>Holidays.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\Holidays.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\LeaveManagement.Designer.vb">
+      <DependentUpon>LeaveManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\LeaveManagement.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Attendance.resx">
+      <DependentUpon>Attendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attends.resx">
+      <DependentUpon>Attends.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cutoff.resx">
+      <DependentUpon>Cutoff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CutoffList.resx">
+      <DependentUpon>CutoffList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department.resx">
+      <DependentUpon>Department.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogConfirm.resx">
+      <DependentUpon>DialogConfirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEmployee.resx">
+      <DependentUpon>DialogEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogError.resx">
+      <DependentUpon>DialogError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSuccess.resx">
+      <DependentUpon>DialogSuccess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeList.resx">
+      <DependentUpon>EmployeeList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView.resx">
+      <DependentUpon>EmployeeView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\AppliedOvertimes.resx">
+      <DependentUpon>AppliedOvertimes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\EducationalBackground.resx">
+      <DependentUpon>EducationalBackground.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\FamilyBackground.resx">
+      <DependentUpon>FamilyBackground.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\LeaveApplicationForm.resx">
+      <DependentUpon>LeaveApplicationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\LeaveApplications.resx">
+      <DependentUpon>LeaveApplications.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\LoanApplicationForm.resx">
+      <DependentUpon>LoanApplicationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\LoanApplications.resx">
+      <DependentUpon>LoanApplications.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\OvertimeForm.resx">
+      <DependentUpon>OvertimeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\PersonalData.resx">
+      <DependentUpon>PersonalData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_usercontrols\TimeSheet.resx">
+      <DependentUpon>TimeSheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForApprovalLeaves.resx">
+      <DependentUpon>ForApprovalLeaves.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holiday.resx">
+      <DependentUpon>Holiday.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobTitle.resx">
+      <DependentUpon>JobTitle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OvertimeManagement.resx">
+      <DependentUpon>OvertimeManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password.resx">
+      <DependentUpon>Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollWizard.resx">
+      <DependentUpon>PayrollWizard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payroll_wizard\HollidayWithinCutoff.resx">
+      <DependentUpon>HollidayWithinCutoff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="references_usercontrols\Departments.resx">
+      <DependentUpon>Departments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="references_usercontrols\JobTitles.resx">
+      <DependentUpon>JobTitles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResignForm.resx">
+      <DependentUpon>ResignForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControlAddress.resx">
+      <DependentUpon>userControlAddress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\Holidays.resx">
+      <DependentUpon>Holidays.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\LeaveManagement.resx">
+      <DependentUpon>LeaveManagement.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitmapQuestionMark.bmp" />
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
